@@ -27,14 +27,14 @@ struct BasketView: View {
                 
                 ForEach (bascet, id: \.assortment.id) { product in
                     HStack{
-                        Image(assortment)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .padding()
-                        Text(assortment.name)
-                            .font(.headline)
-                            .padding([.top, .leading, .trailing] ,10)
+//
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 200, height: 200)
+//                            .padding()
+//                        Text(bascet.name)
+//                            .font(.headline)
+//                            .padding([.top, .leading, .trailing] ,10)
                     }
                 }
                 

@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class AssortmentData: NSObject {
+class AssortmentData: NSObject{
     @Published var bascet: [Assortment] = []
     @Published var assortment: [Assortment] = [
         AssortmentClothes(name: "SKARPETY TRENINGOWE CZARNE HAFT",price: 40.00, image: "assortment/skarpety_czarne", description: "Skarpetki sportowe długie to doskonałe rozwiązanie dla wszystkich miłośników aktywnego trybu życia, którzy cenią sobie wygodę i wsparcie podczas intensywnego treningu. Są nie tylko praktycznym elementem garderoby sportowca, ale również stylowym dodatkiem, który podkreśla profesjonalizm i zaangażowanie w dbanie o własne zdrowie i kondycję fizyczną.", availability: true, novelty: true, size: "35-38", color: "black"),
