@@ -4,12 +4,17 @@
 //
 //  Created by Filip Skup on 18/12/2023.
 //
-
+//dodać klase koszyk w której beda 2 zmienne
+// obiekt klasy assortment
+// liczba wystąpien obiektu
 import SwiftUI
 
 struct BasketView: View {
     let assortment = AssortmentData()
-    
+    @State var quantities: [Int] = []
+    init() {
+            _quantities = State(initialValue: Array(repeating: 1, count: assortment.duplicatesCount().count))
+        }
        var body: some View {
         ScrollView{
             VStack{
@@ -21,24 +26,42 @@ struct BasketView: View {
                     .padding()
                 Text("Twój koszyk")
                 Button("Dodaj przedmioty do koszyka") {
-                                assortment.addAssortmentItemsToBasket()
+                    assortment.addAssortmentItemsToBasket()
+                    
                                }
-                var bascet = assortment.duplicatesCount()
+                let bascetItems = assortment.duplicatesCount()
                 
-                ForEach (bascet, id: \.assortment.id) { product in
+                ForEach (bascetItems.indices, id: \.self) { index in
+                    let product = bascetItems[index].assortment
+                    let bindingQuantity = $quantities[index]
+                    
                     HStack{
-//
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(width: 200, height: 200)
-//                            .padding()
-//                        Text(bascet.name)
-//                            .font(.headline)
-//                            .padding([.top, .leading, .trailing] ,10)
-                    }
+                        Image(product.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                            
+                        VStack{
+                            Text(product.name)
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                                .padding(.trailing ,30.0)
+                            HStack{
+                                Picker("Ilość", selection: bindingQuantity) {
+                                    ForEach(1...100, id: \.self) { number in
+                                        Text("\(number)")
+                                    }
+                                }  .pickerStyle(DefaultPickerStyle())
+
+                                                           Text(String(format: "%.2f zł", product.price))
+                            }
+                        }
+                    }.background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                        .cornerRadius(30.0)
+                        .padding(.horizontal)
                 }
                 
-
+                                       
             }
         }
     }
