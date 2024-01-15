@@ -11,20 +11,21 @@ struct FilterView: View {
     @Environment(\.presentationMode) var presentationMode
     // Zmienna pozwalająca wrócic do poprzedniego widoku
     @ObservedObject var assortmentData = AssortmentData()
-    @State private var selectedCategory = "Clothes"
+    @Binding var selectedCategory: String
+    @State private var newSelectedCategory: String = "Wszystkie"
     var body: some View {
         NavigationView{
             VStack{
-                Picker("Kategoria", selection: $selectedCategory){
+                Picker("Kategoria", selection: $newSelectedCategory){
                     ForEach(assortmentData.categories, id: \.self){category in
                         Text(category)
                     }
                 }
                 .pickerStyle(.inline)
-                Text(selectedCategory)
+                Text(newSelectedCategory)
                 Button("Zastosuj"){
+                    self.selectedCategory = newSelectedCategory
                     presentationMode.wrappedValue.dismiss()
-                    // Zastosowanie zmiennej pozwalającej na powrót do poprzedniego widoku
                 }.buttonStyle(.bordered)
                     .padding()
             }
@@ -33,5 +34,5 @@ struct FilterView: View {
 }
 
 #Preview {
-    FilterView()
+    FilterView(selectedCategory: .constant("Wszystkie"))
 }

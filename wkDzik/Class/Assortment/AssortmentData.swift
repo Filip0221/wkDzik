@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 class AssortmentData: NSObject, Identifiable, ObservableObject{
-    static let availableCategories: [String] = ["Clothes", "Food"]
+    static let availableCategories: [String] = ["Wszystkie","Clothes", "Food"]
     var categories: [String] {
         Self.availableCategories
     }

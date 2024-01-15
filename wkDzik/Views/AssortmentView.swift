@@ -10,6 +10,7 @@ import SwiftUI
 struct AssortmentView: View {
     @ObservedObject var assortmentData = AssortmentData()
     @State private var isFilterViewPresented = false
+    @State var filterCategory = "Wszystkie"
     var body: some View {
         ScrollView {
             VStack {
@@ -25,12 +26,13 @@ struct AssortmentView: View {
                 Button("Filtruj"){
                     isFilterViewPresented.toggle()
                 }.sheet(isPresented: $isFilterViewPresented){
-                    FilterView()
+                    FilterView(selectedCategory: $filterCategory)
                 }
                 .buttonStyle(.bordered)
                 .padding()
             }
-
+            Text("Zastosowano filtr: \(filterCategory)")
+            
                 LazyVGrid(columns: [GridItem(), GridItem()]) {
                     ForEach( assortmentData.assortment, id: \.id) { product in
                         NavigationLink(destination: DetailView(product: product)) {
