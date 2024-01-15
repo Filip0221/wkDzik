@@ -34,7 +34,7 @@ struct AssortmentView: View {
             Text("Zastosowano filtr: \(filterCategory)")
             
                 LazyVGrid(columns: [GridItem(), GridItem()]) {
-                    ForEach( assortmentData.assortment, id: \.id) { product in
+                    ForEach( assortmentData.filterAssortment(categories: filterCategory), id: \.id) { product in
                         NavigationLink(destination: DetailView(product: product)) {
                             VStack {
                                 Image(product.image)

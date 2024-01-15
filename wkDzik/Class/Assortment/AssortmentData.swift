@@ -72,6 +72,11 @@ class AssortmentData: NSObject, Identifiable, ObservableObject{
     }
     // Funkcja filtrująca
     func filterAssortment (categories: String) -> [any Assortment]{
-        return assortment
+        if categories == "Wszystkie"{
+            return assortment
+        }
+        else {
+            return assortment.filter { $0.category == categories }
+        }
     }
 }
