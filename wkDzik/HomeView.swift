@@ -14,7 +14,7 @@ struct HomeView: View {
         ButtonHome(imageName: "ubrania_butt", buttonText: "UBRANIA", destinationView: AnyView(UbraniaView())),
         ButtonHome(imageName: "suplementy_butt", buttonText: "SUPLEMENTY", destinationView: AnyView(SuplementyView())),
         ButtonHome(imageName: "napoje_butt", buttonText: "NAPOJE", destinationView: AnyView(NapojeView())),
-        ButtonHome(imageName: "zywnosc_butt", buttonText: "ŻYWNOŚĆ", destinationView: AnyView(ZywnoscView()))
+        ButtonHome(imageName: "zywnosc_butt", buttonText: "ŻYWNOŚĆ", destinationView: AnyView(AssortmentView()))
     ]
 // ciało widoku
     var body: some View {
@@ -79,7 +79,7 @@ struct HomeView: View {
                         }.padding([.leading, .bottom, .trailing])
                     }
 // przycisk zobacz wszystkie
-                    NavigationLink(destination: DetalView()){
+                    NavigationLink(destination: AssortmentView()){
                         Text("Zobacz wszystkie")
                             .foregroundStyle(Color(.white))
                     }.padding()

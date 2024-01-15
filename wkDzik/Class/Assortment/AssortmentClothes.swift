@@ -17,6 +17,7 @@ class AssortmentClothes:Assortment, Identifiable {
     var novelty: Bool = false
     var size: String = ""
     var color: String = ""
+    var category: String = "Clothes"
     
     init(name: String, price: Double, image: String, description: String, availability: Bool, novelty: Bool, size: String, color: String) {
         self.name = name
@@ -27,5 +28,6 @@ class AssortmentClothes:Assortment, Identifiable {
         self.novelty = novelty
         self.size = size
         self.color = color
+        self.category = "Clothes"
     }
 }

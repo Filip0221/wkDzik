@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Assortment{
+protocol Assortment: Identifiable{
     var id: UUID {get}
     var name: String {get set}
     var price: Double {get set}
@@ -15,5 +15,5 @@ protocol Assortment{
     var description: String {get set}
     var availability: Bool {get set}
     var novelty: Bool {get set}
-    
+    var category: String {get set}
 }

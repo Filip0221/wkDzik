@@ -8,11 +8,15 @@
 import UIKit
 
 class ProductInCart: NSObject {
-    var product: Assortment
+    var product: any Assortment
     var quantity: Int
-    
-    init(product: Assortment, quantity: Int) {
+
+    init(product: any Assortment, quantity: Int) {
         self.product = product
         self.quantity = quantity
     }
+    func updateQuantity(newQuantity: Int){
+        self.quantity = newQuantity
+    }
+
 }
