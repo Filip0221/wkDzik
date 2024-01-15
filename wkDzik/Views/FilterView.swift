@@ -22,12 +22,19 @@ struct FilterView: View {
                     }
                 }
                 .pickerStyle(.inline)
-                Text(newSelectedCategory)
-                Button("Zastosuj"){
-                    self.selectedCategory = newSelectedCategory
-                    presentationMode.wrappedValue.dismiss()
-                }.buttonStyle(.bordered)
-                    .padding()
+                HStack{
+                    Button("Zastosuj"){
+                        self.selectedCategory = newSelectedCategory
+                        presentationMode.wrappedValue.dismiss()
+                    }.buttonStyle(.bordered)
+                        .padding()
+                    Button("Usuń filtry"){
+                        self.selectedCategory = "Wszystkie"
+                        newSelectedCategory = "Wszystkie"
+                    }.buttonStyle(.bordered)
+                        .padding([.top, .bottom, .trailing])
+                        .foregroundColor(.red)
+                }
             }
         }
     }

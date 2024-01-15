@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
                 VStack {
-                    Text("Wyszukaj")
+                    AssortmentView()
                 }
                 .navigationTitle("Widok 2")
             .tabItem {

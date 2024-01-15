@@ -12,27 +12,27 @@ struct AssortmentView: View {
     @State private var isFilterViewPresented = false
     @State var filterCategory = "Wszystkie"
     var body: some View {
-        ScrollView {
-            VStack {
-                // Obrazek dzika na górze ekranu
-                Image("dzik")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50)
-                    .padding(.top)
+        NavigationView{
+            ScrollView {
+                VStack {
+                    // Obrazek dzika na górze ekranu
+                    Image("dzik")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50)
+                        .padding(.top)
                 }
-            HStack{
-                Spacer()
-                Button("Filtruj"){
-                    isFilterViewPresented.toggle()
-                }.sheet(isPresented: $isFilterViewPresented){
-                    FilterView(selectedCategory: $filterCategory)
+                HStack{
+                    Spacer()
+                    Button("Filtruj"){
+                        isFilterViewPresented.toggle()
+                    }.sheet(isPresented: $isFilterViewPresented){
+                        FilterView(selectedCategory: $filterCategory)
+                    }
+                    .buttonStyle(.bordered)
+                    .padding()
                 }
-                .buttonStyle(.bordered)
-                .padding()
-            }
-            Text("Zastosowano filtr: \(filterCategory)")
-            
+                
                 LazyVGrid(columns: [GridItem(), GridItem()]) {
                     ForEach( assortmentData.filterAssortment(categories: filterCategory), id: \.id) { product in
                         NavigationLink(destination: DetailView(product: product)) {
@@ -61,6 +61,7 @@ struct AssortmentView: View {
                 .padding(.bottom, 1.0)
             }
         }
+    }
 }
 
 
