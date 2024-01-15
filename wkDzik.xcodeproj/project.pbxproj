@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D51111D52B2B7E480091336F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51111D42B2B7E480091336F /* HomeView.swift */; };
+		D518F4722B55D60300571AF9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D518F4712B55D60300571AF9 /* SearchView.swift */; };
 		D52196382B55AEA500DEA5BF /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52196372B55AEA500DEA5BF /* FilterView.swift */; };
 		D52436D62B30732400E4CC4D /* ButtonHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52436D52B30732400E4CC4D /* ButtonHome.swift */; };
 		D52436D82B30746500E4CC4D /* UbraniaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52436D72B30746500E4CC4D /* UbraniaView.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		D51111D42B2B7E480091336F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D518F4712B55D60300571AF9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D52196372B55AEA500DEA5BF /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		D52436D52B30732400E4CC4D /* ButtonHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHome.swift; sourceTree = "<group>"; };
 		D52436D72B30746500E4CC4D /* UbraniaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbraniaView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				D594E5A42B309F4500A43F25 /* DetailView.swift */,
 				D594E5A62B30A14400A43F25 /* DrinkView.swift */,
 				D52196372B55AEA500DEA5BF /* FilterView.swift */,
+				D518F4712B55D60300571AF9 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D28E792B30D75A0020E5EC /* BasketView.swift in Sources */,
+				D518F4722B55D60300571AF9 /* SearchView.swift in Sources */,
 				D5711F822B3C4A0D00E9EE52 /* ProductInCart.swift in Sources */,
 				D5711F802B3C467F00E9EE52 /* ShoppingCart.swift in Sources */,
 				D52436DC2B3074A300E4CC4D /* NapojeView.swift in Sources */,

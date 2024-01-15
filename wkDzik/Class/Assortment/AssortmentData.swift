@@ -79,4 +79,16 @@ class AssortmentData: NSObject, Identifiable, ObservableObject{
             return assortment.filter { $0.category == categories }
         }
     }
+    func searchAssortment(searchText: String?) -> [any Assortment] {
+        guard let searchText = searchText, !searchText.isEmpty else {
+            return assortment
+        }
+
+        let searchTextWithoutSpaces = searchText.replacingOccurrences(of: " ", with: "")
+
+        return assortment.filter { product in
+            let productNameWithoutSpaces = product.name.replacingOccurrences(of: " ", with: "")
+            return productNameWithoutSpaces.lowercased().contains(searchTextWithoutSpaces.lowercased())
+        }
+    }
 }

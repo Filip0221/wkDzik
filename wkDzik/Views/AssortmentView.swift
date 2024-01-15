@@ -20,7 +20,7 @@ struct AssortmentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50)
-                        .padding(.top)
+                        .padding(.top)                    
                 }
                 HStack{
                     Spacer()
