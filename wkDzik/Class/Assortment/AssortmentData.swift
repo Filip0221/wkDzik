@@ -26,7 +26,7 @@ class AssortmentData: NSObject, Identifiable, ObservableObject{
         AssortmentFood(name: "PODRĘCZNY ZESTAW ZDROWIA", price: 140.00, image: "assortymentFood/zestaw_zdrowia", description: "Są to suplementy przebadane laboratoryjnie, o potwierdzonym, prozdrowotnym działaniu. Każdy z nich ma niezwykle ważne funkcje w organizmie człowieka, a ich niedobór może być przyczyną nie tylko złego samopoczucia, ale przede wszystkim pogorszenia stanu zdrowia.", availability: true, novelty: false),
         AssortmentFood(name: "SOS ZERO BBQ", price: 18.00, image: "assortymentFood/sosBBQ", description: "Sos Barbecue Smoke jest wyrazisty i fantastycznie podkreśla smak potraw mięsnych. Stworzyliśmy produkt, który możesz stosować każdego dnia nie martwiąc się o swoją sylwetkę! Powstał bez dodatku cukru, ani tłuszczu. Jest ulubieńcem kulturystów, którzy niemal każdego dnia jadają duże ilości mięsa, a te z naszym sosem smakuje wybornie! Pozwól nam urozmaicić smak swojej diety.", availability: true, novelty: false, taste: "BBQ")
     ]
-    @Published @State var filterAssortment: [any Assortment] = []
+    @Published var filterAssortment: [any Assortment] = []
     
     // funkcja znajdująca nowe rzeczy w kolekcji
     func findNew() -> [any Assortment]{
@@ -72,6 +72,6 @@ class AssortmentData: NSObject, Identifiable, ObservableObject{
     }
     // Funkcja filtrująca
     func filterAssortment (categories: String) -> [any Assortment]{
-        
+        return assortment
     }
 }
