@@ -6,6 +6,6 @@ Jest to implementacja sklepu na stronie wkdzik.pl, do aplikacji na system IOS.
 
 Applikacja służy do zakupów w sklepie wkdzik.
 
-Projekt nie jest jeszcze skończony. Brakuje koszyka, wyboru przedmiotu i logowania.
+Projekt nie jest jeszcze skończony. Brakuje koszyka i logowania.
 
 Autor: Filip Skup
