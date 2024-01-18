@@ -41,6 +41,7 @@ struct SearchView: View {
                     }
                     Text("Liczba produktów: \(String(howMany))")
                         .padding(.bottom)
+                    // linia przez cały ekran
                     Divider()
                         .padding(.horizontal)
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
