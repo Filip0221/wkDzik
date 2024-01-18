@@ -8,44 +8,50 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 2
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
                 VStack {
                     SearchView()
                 }
                 .navigationTitle("Widok 2")
-            .tabItem {
-                Label("Wyszukaj", systemImage: "magnifyingglass.circle")
-            }
+                .tabItem {
+                    Label("Wyszukaj", systemImage: "magnifyingglass.circle")
+                }
+                .tag(0)
             
                 VStack {
                     Text("Konto")
                 }
                 .navigationTitle("Konto")
-            
-            .tabItem {
-                Label("Konto", systemImage: "person.crop.circle")
-            }
+                .tabItem {
+                    Label("Konto", systemImage: "person.crop.circle")
+                }
+                .tag(1)
             VStack {
                 HomeView()
             }
-        .tabItem {
-            Label("Strona główna", systemImage: "homekit")
-        }
+            .tabItem {
+                Label("Strona główna", systemImage: "homekit")
+            }
+            .tag(2)
                 VStack {
                     BasketView()
                 }
                 .navigationTitle("Koszyk")
-            .tabItem {
-                Label("Koszyk", systemImage: "basket")
-            }
+                .tabItem {
+                    Label("Koszyk", systemImage: "basket")
+                }
+                .tag(3)
             VStack {
                 AssortmentView()
             }
             .navigationTitle("Widok 2")
-        .tabItem {
-            Label("Więcej", systemImage: "text.alignleft")
-        }
+            .tabItem {
+                Label("Więcej", systemImage: "text.alignleft")
+            }
+            .tag(4)
         }
     }
 }
