@@ -91,4 +91,7 @@ class AssortmentData: NSObject, Identifiable, ObservableObject{
             return productNameWithoutSpaces.lowercased().contains(searchTextWithoutSpaces.lowercased())
         }
     }
+    func giveBasket () -> [any Assortment]{
+        return bascet
+    }
 }

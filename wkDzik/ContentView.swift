@@ -33,14 +33,14 @@ struct ContentView: View {
             Label("Strona główna", systemImage: "homekit")
         }
                 VStack {
-                    Text("Koszyk")
+                    BasketView()
                 }
                 .navigationTitle("Koszyk")
             .tabItem {
                 Label("Koszyk", systemImage: "basket")
             }
             VStack {
-                Text("Drugi Widok")
+                AssortmentView()
             }
             .navigationTitle("Widok 2")
         .tabItem {
