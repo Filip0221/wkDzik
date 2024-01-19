@@ -11,10 +11,10 @@ import Foundation
 struct HomeView: View {
 // lista przycisków przekierowujących ubrania, suplementy, napoje, żywność.
     @State private var buttons: [ButtonHome] = [
-        ButtonHome(imageName: "ubrania_butt", buttonText: "UBRANIA", destinationView: AnyView(UbraniaView())),
-        ButtonHome(imageName: "suplementy_butt", buttonText: "SUPLEMENTY", destinationView: AnyView(SuplementyView())),
-        ButtonHome(imageName: "napoje_butt", buttonText: "NAPOJE", destinationView: AnyView(NapojeView())),
-        ButtonHome(imageName: "zywnosc_butt", buttonText: "ŻYWNOŚĆ", destinationView: AnyView(AssortmentView()))
+        ButtonHome(imageName: "ubrania_butt", buttonText: "UBRANIA", destinationView: AnyView(AssortmentView(filterCategory: "CLothes"))),
+        ButtonHome(imageName: "suplementy_butt", buttonText: "SUPLEMENTY", destinationView: AnyView(AssortmentView(filterCategory: "Food"))),
+        ButtonHome(imageName: "napoje_butt", buttonText: "NAPOJE", destinationView: AnyView(AssortmentView(filterCategory: "Food"))),
+        ButtonHome(imageName: "zywnosc_butt", buttonText: "ŻYWNOŚĆ", destinationView: AnyView(AssortmentView(filterCategory: "Food")))
     ]
 // ciało widoku
     var body: some View {
@@ -79,14 +79,14 @@ struct HomeView: View {
                         }.padding([.leading, .bottom, .trailing])
                     }
 // przycisk zobacz wszystkie
-                    NavigationLink(destination: AssortmentView()){
+                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                         Text("Zobacz wszystkie")
                             .foregroundStyle(Color(.white))
                     }.padding()
                         .background(Color(.black))
                         .cornerRadius(90)
 // obrazek z przekierowaniem do widoku
-                    NavigationLink(destination: DrinkView()){
+                    NavigationLink(destination: AssortmentView(filterCategory: "Food")){
                         Image("badz_duzy")
                             .resizable()
                             .aspectRatio(contentMode: .fit)

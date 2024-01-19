@@ -26,7 +26,7 @@ struct MoreView: View {
                 VStack {
 // Produkty DZIK
                     HStack {
-                        NavigationLink(destination: AssortmentView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                             Text("Produkty DZIK")
                                 .foregroundStyle(Color(.black))
                         }
@@ -45,21 +45,21 @@ struct MoreView: View {
                     if isExpandedProductsDZIK {
                         
                         VStack{
-                            NavigationLink(destination: AssortmentView()){
+                            NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                 Image("dzik_energy")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .cornerRadius(15.0)
                                     .padding(.horizontal)
                             }
-                            NavigationLink(destination: AssortmentView()){
+                            NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                 Image("dzik_zero_caffeine")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .cornerRadius(15.0)
                                     .padding(.horizontal)
                             }
-                            NavigationLink(destination: AssortmentView()){
+                            NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                 Image("dzik_vitamin_boost")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -70,7 +70,7 @@ struct MoreView: View {
                     }
 // Nowości
                     HStack {
-                        NavigationLink(destination: AssortmentView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                             Text("Nowości")
                                 .foregroundStyle(Color(.black))
                         }
@@ -80,7 +80,7 @@ struct MoreView: View {
                         .padding(.horizontal)
 // Ubrania
                     HStack {
-                        NavigationLink(destination: UbraniaView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                             Text("Ubrania")
                                 .foregroundStyle(Color(.black))
                         }
@@ -102,7 +102,7 @@ struct MoreView: View {
                         VStack{
 // rozwinięcie kobiety
                             HStack {
-                                NavigationLink(destination: UbraniaView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                                     Text("Kobiety")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -121,7 +121,7 @@ struct MoreView: View {
                             if isExpandedWomen{
                                 VStack{
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Legginsy i spodnie")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -130,7 +130,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Bluzy")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -139,7 +139,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Koszulki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -148,7 +148,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Skarpety")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -157,7 +157,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Staniki sportowe")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -166,7 +166,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Spodenki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -180,7 +180,7 @@ struct MoreView: View {
                             // Koniec sekcji kobiety
                             // rozwinięcie mężczyźni
                             HStack {
-                                NavigationLink(destination: UbraniaView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                                     Text("Mężczyźni")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -199,7 +199,7 @@ struct MoreView: View {
                             if isExpandedMen{
                                 VStack{
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Koszulki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -208,7 +208,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Tank topy")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -217,7 +217,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Bluzy")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -226,7 +226,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Spodnie i legginsy")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -235,7 +235,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Skarpety")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -244,7 +244,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Bielizna")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -253,7 +253,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Spodenki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -262,7 +262,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Czapki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -276,7 +276,7 @@ struct MoreView: View {
 // koniec rozwinięcie mężczyźni
 // rozwinięcie dzieci
                             HStack {
-                                NavigationLink(destination: UbraniaView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                                     Text("Dzieci")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -295,7 +295,7 @@ struct MoreView: View {
                             if isExpandedKids{
                                 VStack{
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Body")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -304,7 +304,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Bluzy")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -313,7 +313,7 @@ struct MoreView: View {
                                     Divider()
                                         .padding(.horizontal)
                                     HStack {
-                                        NavigationLink(destination: AssortmentView()){
+                                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                             Text("Koszulki")
                                                 .foregroundStyle(Color(.black))
                                         }
@@ -327,7 +327,7 @@ struct MoreView: View {
 // koniec rozwinięcie dzieci
 // rozwinięcie kolekcje
                             HStack {
-                                NavigationLink(destination: UbraniaView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                                     Text("Kolekcje")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -347,7 +347,7 @@ struct MoreView: View {
                         if isExpandedCollections{
                             VStack{
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("FALL WINTER 23")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -356,7 +356,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("SUMMER 23")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -365,7 +365,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("SUMMER 23 - WOMEN")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -374,7 +374,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("SPRING SUMMER 23")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -383,7 +383,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("DZIK BASIC")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -392,7 +392,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("DZIK KLASYK")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -401,7 +401,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("DZIK PRO")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -410,7 +410,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("DRWAL")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -419,7 +419,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("GAMING")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -428,7 +428,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("JTCNW")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -437,7 +437,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("WK DZIK")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -446,7 +446,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("NEW SCHOOL 2")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -455,7 +455,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("SPORTOWA POLSKA")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -464,7 +464,7 @@ struct MoreView: View {
                                 Divider()
                                     .padding(.horizontal)
                                 HStack {
-                                    NavigationLink(destination: AssortmentView()){
+                                    NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                         Text("DŹWIGAJ DZIEWCZYNO")
                                             .foregroundStyle(Color(.black))
                                     }
@@ -482,7 +482,7 @@ struct MoreView: View {
                     }
 // Akcesoria
                     HStack {
-                        NavigationLink(destination: UbraniaView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                             Text("Akcesoria")
                                 .foregroundStyle(Color(.black))
                         }
@@ -501,7 +501,7 @@ struct MoreView: View {
                     if isExpandedAccessories{
                         VStack{
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Zestawy")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -510,7 +510,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Akcesoria treningowe")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -519,7 +519,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Czapli i szaliki")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -528,7 +528,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Torby i plecaki")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -537,7 +537,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Shackery i kubki")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -546,7 +546,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Okulary przeciwsłoneczne")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -555,7 +555,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Opaski i Piny")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -564,7 +564,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Ksiązki")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -577,7 +577,7 @@ struct MoreView: View {
                     }
 // Suplementy i odżywianie
                     HStack {
-                        NavigationLink(destination: UbraniaView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Clothes")){
                             Text("Suplemeny i odżywianie")
                                 .foregroundStyle(Color(.black))
                         }
@@ -596,7 +596,7 @@ struct MoreView: View {
                     if isExpandedFood{
                         VStack{
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Zestawy")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -605,7 +605,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Białko Dobre WHEY")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -614,7 +614,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Przedtreningówki")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -623,7 +623,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Witaminy")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -632,7 +632,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Cytruliny")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -641,7 +641,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Kraatyna")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -650,7 +650,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Sosy zero kalorii")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -659,7 +659,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Batony")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -668,7 +668,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Kawy")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -677,7 +677,7 @@ struct MoreView: View {
                             Divider()
                                 .padding(.horizontal)
                             HStack {
-                                NavigationLink(destination: AssortmentView()){
+                                NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                                     Text("Wafle")
                                         .foregroundStyle(Color(.black))
                                 }
@@ -691,7 +691,7 @@ struct MoreView: View {
 // Suplementy i odżywianie koniec
 // LookBook
                     HStack {
-                        NavigationLink(destination: AssortmentView()){
+                        NavigationLink(destination: AssortmentView(filterCategory: "Wszystkie")){
                             Text("Lookbook")
                                 .foregroundStyle(Color(.black))
                         }

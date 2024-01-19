@@ -12,7 +12,7 @@ struct UbraniaView: View {
     
     
     var body: some View {
-        Text("Widok ubrania")
+        AssortmentView(filterCategory: "Clothes")
     }
 }
 #Preview {

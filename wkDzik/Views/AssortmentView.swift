@@ -10,7 +10,7 @@ import SwiftUI
 struct AssortmentView: View {
     @ObservedObject var assortmentData = AssortmentData()
     @State private var isFilterViewPresented = false
-    @State var filterCategory = "Wszystkie"
+    @State var filterCategory: String
     var body: some View {
         NavigationView{
             ScrollView {
@@ -27,7 +27,7 @@ struct AssortmentView: View {
                     Button("Filtruj"){
                         isFilterViewPresented.toggle()
                     }.sheet(isPresented: $isFilterViewPresented){
-                        FilterView(selectedCategory: $filterCategory)
+                        FilterView(selectedCategory: $filterCategory, newSelectedCategory: filterCategory)
                     }
                     .buttonStyle(.bordered)
                     .padding()
@@ -66,6 +66,6 @@ struct AssortmentView: View {
 
 
 #Preview {
-    AssortmentView()
+    AssortmentView(filterCategory: "Wszystkie")
 }
 

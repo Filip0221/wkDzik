@@ -12,7 +12,7 @@ struct FilterView: View {
     // Zmienna pozwalająca wrócic do poprzedniego widoku
     @ObservedObject var assortmentData = AssortmentData()
     @Binding var selectedCategory: String
-    @State private var newSelectedCategory: String = "Wszystkie"
+    @State var newSelectedCategory: String
     var body: some View {
         NavigationView{
             VStack{
@@ -41,5 +41,5 @@ struct FilterView: View {
 }
 
 #Preview {
-    FilterView(selectedCategory: .constant("Wszystkie"))
+    FilterView(selectedCategory: .constant("Wszystkie"), newSelectedCategory: "Wszystkie")
 }
