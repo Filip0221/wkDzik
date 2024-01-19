@@ -45,7 +45,7 @@ struct ContentView: View {
                 }
                 .tag(3)
             VStack {
-                AssortmentView()
+                MoreView()
             }
             .navigationTitle("Widok 2")
             .tabItem {
