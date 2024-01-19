@@ -11,7 +11,7 @@ import Foundation
 struct HomeView: View {
 // lista przycisków przekierowujących ubrania, suplementy, napoje, żywność.
     @State private var buttons: [ButtonHome] = [
-        ButtonHome(imageName: "ubrania_butt", buttonText: "UBRANIA", destinationView: AnyView(AssortmentView(filterCategory: "CLothes"))),
+        ButtonHome(imageName: "ubrania_butt", buttonText: "UBRANIA", destinationView: AnyView(AssortmentView(filterCategory: "Clothes"))),
         ButtonHome(imageName: "suplementy_butt", buttonText: "SUPLEMENTY", destinationView: AnyView(AssortmentView(filterCategory: "Food"))),
         ButtonHome(imageName: "napoje_butt", buttonText: "NAPOJE", destinationView: AnyView(AssortmentView(filterCategory: "Food"))),
         ButtonHome(imageName: "zywnosc_butt", buttonText: "ŻYWNOŚĆ", destinationView: AnyView(AssortmentView(filterCategory: "Food")))
