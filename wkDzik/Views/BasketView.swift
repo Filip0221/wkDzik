@@ -12,6 +12,7 @@ import SwiftUI
 // BasketView.swift
 struct BasketView: View {
     @ObservedObject var assortmentData = AssortmentData()
+    
     var body: some View {
         NavigationView{
             ScrollView {
@@ -22,7 +23,6 @@ struct BasketView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50)
                         .padding()
-                    
                     Text("Twój koszyk")
                     ForEach(assortmentData.bascet, id: \.id) { product in
                         NavigationLink(destination: DetailView(product: product)) {
